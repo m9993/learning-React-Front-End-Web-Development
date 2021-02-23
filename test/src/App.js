@@ -1,34 +1,24 @@
-import {Navbar,NavbarBrand} from 'reactstrap';
+import React,{Component} from 'react';
+import {
+  Navbar,
+  NavbarBrand,
 
-import logo from './logo.svg';
+} from 'reactstrap';
 import './App.css';
+import Menu from './components/MenuComponent';
 
-function App() {
-  return (
-    <div className="App">
-      <Navbar dark color="primary">
-        <div className="container text-danger">
-          <NavbarBrand>Muntasir</NavbarBrand>
-        </div>
-      </Navbar>
+class App extends Component{
+  render(){
+    return(
+      <div className="">
+        <Navbar dark color="primary">
+          <NavbarBrand>Ristorante Con Fusion</NavbarBrand>
+        </Navbar>
 
-
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+        <Menu />
+      </div>
+    );
+  }
+  
 }
-
 export default App;
